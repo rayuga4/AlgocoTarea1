@@ -22,6 +22,6 @@ for x in range(len(list)):
 
 print(str(time.time()-start) + " segundos")
 
-print(list)
+#print(list)
 
-print(str(time.time()-start) + " segundos")
+#print(str(time.time()-start) + " segundos")
