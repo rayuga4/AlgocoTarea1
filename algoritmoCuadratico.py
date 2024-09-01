@@ -1,7 +1,7 @@
 #Bubble sort
 import time
 
-nombre = "datasetOrdenado.txt"
+nombre = "datasetDesordenado.txt"
 file = open(nombre,"r")
 aux = file.readline()
 file.close()

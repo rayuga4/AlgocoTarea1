@@ -1,6 +1,6 @@
 import time
 
-nombre = "datasetOrdenado.txt"
+nombre = "datasetDesordenado.txt"
 file = open(nombre,"r")
 aux = file.readline()
 file.close()
@@ -9,7 +9,7 @@ list = [int(num) for num in aux.strip().split()]
 
 start = time.time()
 
-#Implementacion especifica sacada de geekforgeeks.org/merge-sort/
+#Implementacion especifica sacada de https://www.geeksforgeeks.org/merge-sort/
 def merge(arr,izq,medio,der):
     n1 = medio-izq+1
     n2 = der-medio
