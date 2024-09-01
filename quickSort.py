@@ -1,5 +1,4 @@
 import time
-start = time.time()
 
 nombre = "datasetMitadOrdenado.txt"
 file = open(nombre,"r")
@@ -8,7 +7,9 @@ file.close()
 
 list = [int(num) for num in aux.strip().split()]
 
-list.sort()
+start = time.time()
+
+
 
 print(str(time.time()-start) + " segundos")
 

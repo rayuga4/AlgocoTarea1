@@ -1,6 +1,5 @@
 #Bubble sort
 import time
-start = time.time()
 
 nombre = "datasetOrdenado.txt"
 file = open(nombre,"r")
@@ -8,6 +7,8 @@ aux = file.readline()
 file.close()
 
 list = [int(num) for num in aux.strip().split()]
+
+start = time.time()
 
 for x in range(len(list)):
     flag=False

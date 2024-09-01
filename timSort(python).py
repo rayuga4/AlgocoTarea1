@@ -1,5 +1,4 @@
 import time
-start = time.time()
 
 nombre = "datasetMitadOrdenado.txt"
 file = open(nombre,"r")
@@ -7,6 +6,8 @@ aux = file.readline()
 file.close()
 
 list = [int(num) for num in aux.strip().split()]
+
+start = time.time()
 
 list.sort()
 
