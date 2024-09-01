@@ -13,6 +13,7 @@ list.sort()
 
 print(str(time.time()-start) + " segundos")
 
-#print(list)
-
-#print(str(time.time()-start) + " segundos")
+aux = "timSort"+nombre
+file = open(aux,"w")
+for num in list:
+    file.write(str(num)+ " ")

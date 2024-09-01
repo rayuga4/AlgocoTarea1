@@ -49,6 +49,7 @@ mergeSort(list,0,len(list)-1)
 
 print(str(time.time()-start) + " segundos")
 
-#print(list)
-
-#print(str(time.time()-start) + " segundos")
+aux = "mergeSort"+nombre
+file = open(aux,"w")
+for num in list:
+    file.write(str(num)+ " ")

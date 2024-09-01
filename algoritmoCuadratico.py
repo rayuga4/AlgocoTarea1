@@ -23,6 +23,7 @@ for x in range(len(list)):
 
 print(str(time.time()-start) + " segundos")
 
-#print(list)
-
-#print(str(time.time()-start) + " segundos")
+aux = "bubbleSort"+nombre
+file = open(aux,"w")
+for num in list:
+    file.write(str(num)+ " ")
