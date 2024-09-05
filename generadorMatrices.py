@@ -1,6 +1,6 @@
 import random
-n = 15
-m = random.randint(5,10)
+n = 200
+m = 200
 m1 = []
 for x in range(n):
     m1.append([])
@@ -11,9 +11,7 @@ for x in range(m):
     m2.append([])
     for y in range(n):
         m2[x].append(random.randint(0,100))
-print(m1)
-print(m2)
-name = "matrices.txt"
+name = "matrices " + str(n) + " " + str(m) + ".txt"
 file = open(name, "w")
 file.write(str(n)+" "+str(m)+"\n")
 for row in m1:

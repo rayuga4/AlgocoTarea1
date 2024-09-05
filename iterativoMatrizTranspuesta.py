@@ -10,11 +10,12 @@ for row in range(len(m2)):
 
 start = time.time()
 
+m2Transpuesto = [[m2[y][x] for y in range(len(m2))] for x in range(len(m2[0]))]
 out = [[0 for x in range(n)] for y in range(n)]
 for x in range(len(m1)):
-    for y in range(len(m2[0])):
-        for z in range(len(m2)):
-            out[x][y] += m1[x][z]*m2[z][y]
+    for y in range(len(m2Transpuesto)):
+        for z in range(len(m2Transpuesto[0])):
+            out[x][y] += m1[x][z]*m2Transpuesto[y][z]
 
 print(str(time.time()-start) + " segundos")
 
