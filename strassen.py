@@ -1,7 +1,7 @@
 import time
 import numpy as np
 
-file = open("matrices 200 200.txt","r")
+file = open("matrices 1000 1000.txt","r")
 n,m = [int(num) for num in file.readline().strip().split()]
 m1 = file.readline().strip().strip(",").split(",")
 for row in range(len(m1)):

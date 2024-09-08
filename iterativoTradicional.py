@@ -1,5 +1,5 @@
 import time
-file = open("matrices 200 200.txt","r")
+file = open("matrices 1000 1000.txt","r")
 n,m = [int(num) for num in file.readline().strip().split()]
 m1 = file.readline().strip().strip(",").split(",")
 for row in range(len(m1)):
@@ -18,5 +18,12 @@ for x in range(len(m1)):
 
 print(str(time.time()-start) + " segundos")
 
+name = "iterativo " + "matrices " + str(n) + " " + str(m) + ".txt"
+file = open(name, "w")
+file.write(str(n)+" "+str(m)+"\n")
+for row in out:
+    for value in row:
+        file.write(str(value)+" ")
+    file.write(", ")
 #for row in out:
 #    print(row)
