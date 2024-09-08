@@ -1,8 +1,8 @@
 import time
 import numpy as np
 
-file = open("matrices 1000 1000.txt","r")
-n,m = [int(num) for num in file.readline().strip().split()]
+file = open("matrices 200 200.txt","r")
+nOriginal,mOriginal = [int(num) for num in file.readline().strip().split()]
 m1 = file.readline().strip().strip(",").split(",")
 for row in range(len(m1)):
     m1[row] = [int(num) for num in m1[row].strip().split()]
@@ -60,3 +60,12 @@ C = strassen(A, B)
 print(str(time.time()-start) + " segundos")
 
 print(C)
+out = C.tolist()
+
+name = "strassen " + "matrices " + str(nOriginal) + " " + str(mOriginal) + ".txt"
+file = open(name, "w")
+file.write(str(nOriginal)+" "+str(mOriginal)+"\n")
+for row in out:
+    for value in row:
+        file.write(str(value)+" ")
+    file.write(", ")
