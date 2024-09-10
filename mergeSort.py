@@ -11,6 +11,7 @@ start = time.time()
 
 #Implementacion especifica sacada de https://www.geeksforgeeks.org/merge-sort/
 def merge(arr,izq,medio,der):
+# se obtenien los tamaños de las sublistas y se inicializan
     n1 = medio-izq+1
     n2 = der-medio
     auxIzq = [0]*n1
@@ -21,6 +22,7 @@ def merge(arr,izq,medio,der):
         auxDer[j] = arr[medio+1+j]
     i = j = 0
     k = izq
+# se insertan en el orden correcto en la lista original el contenido de las particiones
     while i<n1 and j<n2:
         if auxIzq[i]<=auxDer[j]:
             arr[k] = auxIzq[i]
