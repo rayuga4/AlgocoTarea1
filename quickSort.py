@@ -12,22 +12,15 @@ start = time.time()
 
 #Implementacion especifica sacada de https://stackoverflow.com/questions/18262306/quicksort-with-python
 def qsort(xs, fst, lst):
-    '''
-    Sort the range xs[fst, lst] in-place with vanilla QuickSort
-
-    :param xs:  the list of numbers to sort
-    :param fst: the first index from xs to begin sorting from,
-                must be in the range [0, len(xs))
-    :param lst: the last index from xs to stop sorting at
-                must be in the range [fst, len(xs))
-    :return:    nothing, the side effect is that xs[fst, lst] is sorted
-    '''
+# caso base
     if fst >= lst:
         return
 
+# se inicializan los 2 punteros a los 2 extremos de la particion y se selecciona un pivote aleatorio dentro de la particion
     i, j = fst, lst
     pivot = xs[random.randint(fst, lst)]
 
+# el puntero i busca elementos mayores al pivote a la izquierda mientras j busca elementos menores a la derecha, al encontrarse tales valores, se intercambian si los punteros aun no se intersectan.
     while i <= j:
         while xs[i] < pivot:
             i += 1
@@ -37,6 +30,7 @@ def qsort(xs, fst, lst):
         if i <= j:
             xs[i], xs[j] = xs[j], xs[i]
             i, j = i + 1, j - 1
+# cuando se intersectan los punteros las particiones estan listas y se llama recursivamente quick sort en las particiones creadas
     qsort(xs, fst, j)
     qsort(xs, i, lst)
 
